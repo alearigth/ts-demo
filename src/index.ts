@@ -1,3 +1,6 @@
+import { Estudiante } from './models/Estudiante';
+import { Curso } from "./models/Curso"
+import { LISTA_CURSOS } from './mock/cursos.mock';
 import { deleteAllCookies, deleteCookie, getCookieValue, setCookie } from "cookies-utils"
 
 //comentario en ts
@@ -547,3 +550,46 @@ delete miTemporizador.terminar
 // document.getElementById("boton-login").addEventListener("click", () => {
 //     console.log("haz echo click en el login")
 // })
+
+
+
+// ** Clases
+
+// creamos un curso
+
+// const cursoTs: Curso = new Curso("TypeScript", 15)
+// const cursoJs: Curso = new Curso("JavaScript", 20)
+
+// const listaDeCursos: Curso[] = []
+
+// listaDeCursos.push(cursoTs, cursoJs) // lista de cursos
+
+// usamos el mock
+
+const listaCursos: Curso[] = LISTA_CURSOS;
+
+// creamos estudiante
+
+const alejandro: Estudiante = new Estudiante("Alejandro",listaCursos,"Mogrovejo")
+
+console.log(`${alejandro.nombre} estudia: `)
+alejandro.cursos.forEach((curso: Curso) => {
+    console.log(`-${curso.nombre} (${curso.horas} horas)`)
+})
+
+const cusroAngular: Curso = new Curso("Angular", 25)
+alejandro.cursos.push(cusroAngular) // añadimos
+
+// conocer las horas estudiadas
+
+alejandro.horasEstudiadas
+
+alejandro.ID_Estudiante
+// saber la instancia de un objeto/ variable
+
+// typeof
+// instaceof
+
+
+
+
