@@ -711,3 +711,20 @@ class PruebaMetodoDecorador {
 // usamos el metodo con el parametro y su decorador
 new PruebaMetodoDecorador().prueba("hola", false)
 
+
+// Patrones creacionales
+
+
+const miSingleton = Singleton.getInstance()
+
+const miSegundoSingleton = Singleton.getInstance()
+
+// comprueba si ambos son iguales
+
+if(miSingleton === miSegundoSingleton) {
+    console.log("singleton funciona correctamente son iguales")
+    miSingleton.mostrarPorConsola()
+    miSegundoSingleton.mostrarPorConsola()
+} else {
+    console.log("las variables contienen distintas instancias")
+}
